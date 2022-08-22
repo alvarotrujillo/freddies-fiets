@@ -7,7 +7,7 @@ class CreateBikes < ActiveRecord::Migration[7.0]
       t.text :description
       t.string :gears
       t.boolean :hand_brakes
-      t.float :price
+      t.integer :price
       t.boolean :active
 
       t.timestamps
