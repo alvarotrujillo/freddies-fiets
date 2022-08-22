@@ -31,8 +31,8 @@ puts 'Creating 50 bikes...'
     description: Faker::Lorem,
     gears: ['1', '3', '7', '18', '21', '28'].sample,
     hand_brakes: [true, false].sample,
-    user_id: (1..50),
-    price: rand(70..300)
+    user_id: (1..50).sample,
+    price: (70..300).sample
   )
   bike.save!
 end
