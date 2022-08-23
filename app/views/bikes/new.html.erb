@@ -1,4 +1,7 @@
+<div class="container">
+
 <h1>Bike Listing Creation</h1>
+
 <br>
 <%= simple_form_for [@bike] do |f| %>
   <%= f.input :name, label: 'What brand & model is your bike?' %>
@@ -11,3 +14,4 @@
   <%= f.input :price, label: 'How much is a per day rental?' %>
   <%= f.submit 'Create your bike listing' %>
 <% end %>
+</div>
