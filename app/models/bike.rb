@@ -9,7 +9,7 @@ class Bike < ApplicationRecord
 
 
   CATEGORIES = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike']
-  GEARS = ['1', '3', '7', '18', '21', '28']
+  GEARS = ['No gears', '3', '7', '18', '21', '28']
 
   validates :name, presence: true
   validates :bike_type, presence: true, inclusion: { in: CATEGORIES }
