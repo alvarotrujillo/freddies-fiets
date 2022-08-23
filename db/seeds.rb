@@ -19,6 +19,7 @@ puts "Database is clean."
 # Test User Credentials below!
 User.create!(email: "test123@test.com", first_name: "Alvaro", last_name: "Trujillo", password: 'batch929')
 
+
 puts 'Creating 10 users...'
 10.times do
   user = User.new(
@@ -36,6 +37,9 @@ puts 'Finished! creating fifty Users'
 
 puts 'Initializing bikes creation'
 increment = 0 # var used to select different pics
+
+# Test Bikes Credentials for Alvaro user below!
+# Bike.create!(name: "Get me there", bike_type: "Cargo bike", location: "Amsterdam", description: "It will take you there, don't worry", gears: "3", hand_brakes: true, price: 20, active: true, user_id: 1)
 
 puts 'Creating 10 road bikes...'
   road_10pics = %w[
