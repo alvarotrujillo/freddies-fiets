@@ -1,9 +1,27 @@
-<h1>Freddie's Feet Dashboard for <%= current_user.first_name %></h1>
+<h1>Freddie's Fiets Dashboard for <%= current_user.first_name %></h1>
 <h3>User details </h3>
 
 <p>First name: <%=current_user.first_name %></p>
 <p>Last name: <%=current_user.last_name %></p>
 <p>e-mail: <%=current_user.email %></p>
-<%= link_to "Reset your password", edit_user_password_path(current_user)  %>
+<%= link_to "Edit your details",  edit_user_registration_path(current_user) %>
 
+<h3>These are your bikes, <%= current_user.first_name %></h3>
 <%= @user_bikes %>
+  <%# <% @user_bikes.each do |bike|
+
+    # <%# <%= render "components/cardtrip", bike: bike %>
+  <%# <% end %>
+
+
+<h3>These are your bookings, <%= current_user.first_name %></h3>
+
+<%= @user_bookings %>
+
+
+
+<%# <div class="cards"> %>
+  <%# <% @user_bikes.each do |bike| %>
+    <%# <%= render "components/cardtrip", bike: bike %>
+  <%# <% end %>
+<%# </div> %>
