@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def account
-
+    @user_bikes = Bike.where(bike.user == user)
   end
 
   private
