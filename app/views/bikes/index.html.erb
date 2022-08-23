@@ -1,7 +1,6 @@
 <h1>Bikes#index</h1>
-<ul>
+<div class="cards">
   <% @bikes.each do |bike| %>
-    <li><%= bike.name %></li>
+  <%= render "components/cardtrip", bike: bike %>
   <% end %>
-</ul>
-
+</div>

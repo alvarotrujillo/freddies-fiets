@@ -55,7 +55,7 @@ puts 'Creating 10 road bikes...'
       name: Faker::Music::RockBand.name,
       bike_type: 'Road bike',
       location: Faker::Address.city,
-      description: Faker::Lorem,
+      description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
       gears: ['18', '21', '28'].sample,
       hand_brakes: true,
       user: User.all.sample,
