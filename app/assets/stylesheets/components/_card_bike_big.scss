@@ -1,0 +1,55 @@
+.bb-card-details {
+  overflow: hidden;
+  background: #FFFFFF;
+  opacity: 0.9;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-top: 5em;
+  & h1 {
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+
+.bb-container {
+  position: absolute;
+  width: 700px;
+}
+
+.bb-card-text {
+  text-align: center;
+  padding: 8px;
+}
+
+.bb-card-details > img {
+  height: 250px;
+  width: 100%;
+  object-fit: none;
+}
+
+// .bb-card-trip h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .bb-card-trip p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
+
+
+// .bb-card-trip .bb-card-trip-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+// .bb-card-trip-infos .bb-card-trip-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }

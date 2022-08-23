@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="bb-container">
+    <div class="bb-card-details">
+      <h1><em><%= @bike.name %></em></h1>
+      <%= cl_image_tag(@bike.photo.key) %>
+        <div class="bb-card-text">
+          <p><strong>Owner:</strong> <%= @bike.user.first_name %> <%= @bike.user.last_name %> </p>
+          <p><strong>City:</strong> <%= @bike.location %></p>
+          <p><strong>Type of bike:</strong> <%= @bike.bike_type %></p>
+          <p><strong>Gears:</strong> <%= @bike.gears %></p>
+          <p><strong>Description from the owner:</strong> <%= @bike.description %></p>
+          <p><strong>Price per day:</strong> €<%= @bike.price %></p>
+          <button type="button" class="btn btn-primary">Book now!</button>
+        </div>
+        <%# Add logic so that booking is only available for bikes that are free,
+        possibility of end-date being added %>
+      </div>
+    </div>
+  </div>
+</div>
