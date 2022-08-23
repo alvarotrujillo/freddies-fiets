@@ -8,16 +8,19 @@
 require "open-uri"
 
 
+
 puts "Cleaning database..."
-puts "... users"
-User.destroy_all
 puts "... bikes"
 Bike.destroy_all
+puts "... users"
+User.destroy_all
 puts "Database is clean."
 
+# Test User Credentials below!
+User.create!(email: "test123@test.com", first_name: "Alvaro", last_name: "Trujillo", password: 'batch929')
 
-puts 'Creating 50 users...'
-50.times do
+puts 'Creating 10 users...'
+10.times do
   user = User.new(
     email: Faker::Internet.email,
     first_name: Faker::Name.first_name,
