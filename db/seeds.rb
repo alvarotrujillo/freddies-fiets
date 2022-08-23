@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-require 'faker'
 
 puts "Cleaning database..."
 puts "... users"
@@ -49,7 +48,7 @@ puts 'Creating 10 road bikes...'
   10.times do
     bike = Bike.new(
       name: Faker::Music::RockBand.name,
-      type: 'Road bike',
+      bike_type: 'Road bike',
       location: Faker::Address.city,
       description: Faker::Lorem,
       gears: ['18', '21', '28'].sample,
@@ -78,7 +77,7 @@ puts 'Creating 10 mtb bikes...'
   10.times do
     bike = Bike.new(
       name: Faker::Music::RockBand.name,
-      type: 'Mountain bike',
+      bike_type: 'Mountain bike',
       location: Faker::Address.city,
       description: Faker::Lorem,
       gears: ['18', '21', '28'].sample,
@@ -107,7 +106,7 @@ puts 'Creating 10 fixie/singlespeed bikes...'
   10.times do
     bike = Bike.new(
       name: Faker::Music::RockBand.name,
-      type: ['Single-speed bike', 'Fixie bike'].sample,
+      bike_type: ['Single-speed bike', 'Fixie bike'].sample,
       location: Faker::Address.city,
       description: Faker::Lorem,
       gears: '1',
@@ -136,7 +135,7 @@ puts 'Creating 10 city bikes...'
   10.times do
     bike = Bike.new(
       name: Faker::Music::RockBand.name,
-      type: 'City bike',
+      bike_type: 'City bike',
       location: Faker::Address.city,
       description: Faker::Lorem,
       gears: ['3', '7', '18', '21'].sample,
@@ -160,7 +159,7 @@ puts 'Creating 5 bmx bikes...'
   5.times do
     bike = Bike.new(
       name: Faker::Music::RockBand.name,
-      type: 'BMX bike',
+      bike_type: 'BMX bike',
       location: Faker::Address.city,
       description: Faker::Lorem,
       gears: '1',
@@ -184,7 +183,7 @@ puts 'Creating 5 cargo bikes...'
   5.times do
     bike = Bike.new(
       name: Faker::Music::RockBand.name,
-      type: "Cargo bike",
+      bike_type: "Cargo bike",
       location: Faker::Address.city,
       description: Faker::Lorem,
       gears: ['1', '7', '21'].sample,
@@ -202,7 +201,7 @@ puts 'Creating 5 cargo bikes...'
 # 50.times do
 #   bike = Bike.new(
 #     name: Faker::Music::RockBand.name,
-#     type: ['city bike', 'road bike', 'mountain bike'].sample,
+#     bike_type: ['city bike', 'road bike', 'mountain bike'].sample,
 #     location: Faker::Address.city,
 #     description: Faker::Lorem,
 #     gears: ['1', '3', '7', '18', '21', '28'].sample,
@@ -212,6 +211,7 @@ puts 'Creating 5 cargo bikes...'
 #   )
 #   bike.save!
 # end
+
 
 # Name, type, location, description, photo, gears, hand-brakes?, user_id, price
 
