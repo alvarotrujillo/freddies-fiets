@@ -8,9 +8,8 @@ class BikesController < ApplicationController
   end
 
   def create
-    @user = User.find([:id])
     @bike = Bike.new(bike_params)
-    @bike.user = @user
+    # @bike.user = current_user
 
     if @bike.save
       redirect_to bikes_index_path
@@ -22,6 +21,6 @@ class BikesController < ApplicationController
   private
 
   def bike_params
-    params.require(:bike).permit(:name, :bike_type, :location, :description, :gears, :hand_brake, :price, :active)
+    params.require(:bike).permit(:name, :bike_type, :location, :description, :gears, :photo, :hand_brake, :price, :active)
   end
 end
