@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Freddie's Fiets Dashboard for <%= current_user.first_name %></h1>
 <h3>User details </h3>
 
@@ -13,15 +14,13 @@
     # <%# <%= render "components/cardtrip", bike: bike %>
   <%# <% end %>
 
-
 <h3>These are your bookings, <%= current_user.first_name %></h3>
 
 <%= @user_bookings %>
-
-
 
 <%# <div class="cards"> %>
   <%# <% @user_bikes.each do |bike| %>
     <%# <%= render "components/cardtrip", bike: bike %>
   <%# <% end %>
 <%# </div> %>
+</div>
