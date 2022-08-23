@@ -1,28 +1,31 @@
-<div class="container">
-<h1 class="fw-bold">Freddie's Fiets Dashboard</h1>
-<div class="card bg-light mb-3">
-  <div class="card-body">
-    <h3 class="fw-bold">User details </h3>
-    <p>First name: <%=current_user.first_name %></p>
-    <p>Last name: <%=current_user.last_name %></p>
-    <p>e-mail: <%=current_user.email %></p>
-    <%= link_to "Edit your details",  edit_user_registration_path(current_user) %>
-  </div>
-</div>
 
-<div class="card bg-light mb-3">
-  <div class="card-body">
-    <h3 class="fw-bold">Your bikes</h3>
-    <br>
-    <% @user_bikes.each do |bike| %>
-      <%= render "components/cardproductbike", bike: bike %>
-    <% end %>
-  </div>
-</div>
+<div class="main-content pt-4 container">
 
-<div class="card bg-light mb-3">
-  <div class="card-body">
-    <h3 class="fw-bold">Your bookings</h3>
-    <%= @user_bookings %>
+  <h1 class="fw-bold">Freddie's Fiets Dashboard</h1>
+  <div class="card bg-light mb-3">
+    <div class="card-body">
+      <h3 class="fw-bold">User details </h3>
+      <p>First name: <%=current_user.first_name %></p>
+      <p>Last name: <%=current_user.last_name %></p>
+      <p>e-mail: <%=current_user.email %></p>
+      <%= link_to "Edit your details",  edit_user_registration_path(current_user) %>
+    </div>
+  </div>
+
+  <div class="card bg-light mb-3">
+    <div class="card-body">
+      <h3 class="fw-bold">Your bikes</h3>
+      <br>
+      <% @user_bikes.each do |bike| %>
+        <%= render "components/cardproductbike", bike: bike %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card bg-light mb-3">
+    <div class="card-body">
+      <h3 class="fw-bold">Your bookings</h3>
+      <%= @user_bookings %>
+    </div>
   </div>
 </div>
