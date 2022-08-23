@@ -26,7 +26,7 @@ puts 'Creating 50 bikes...'
 50.times do
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
-    type: ['city bike', 'road bike', 'mountain bike'].sample,
+    bike_type: ['city bike', 'road bike', 'mountain bike'].sample,
     location: Faker::Address.city,
     description: Faker::Lorem,
     gears: ['1', '3', '7', '18', '21', '28'].sample,

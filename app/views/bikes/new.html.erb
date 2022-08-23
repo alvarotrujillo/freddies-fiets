@@ -1,7 +1,7 @@
 <h1>Bikes#new</h1>
 <%= simple_form_for [@bike] do |f| %>
   <%= f.input :name, label: 'Write the brand and model of the bike below' %>
-  <%= f.input :type, as: :radio_buttons, collection: Bike::CATEGORIES %>
+  <%= f.input :bike_type, as: :radio_buttons, collection: Bike::CATEGORIES %>
   <%= f.input :location, label: 'What city are you looking to list your bike in?' %>
   <%= f.input :description, label: 'Describe your bike' %>
   <%= f.input :gears, as: :radio_buttons, collection: Bike:: GEARS, label: 'Select how many gears does the bike have?' %>
@@ -9,6 +9,3 @@
   <%= f.input :price, label: 'Price per day' %>
   <%= f.submit 'Create your bike listing' %>
 <% end %>
-
-<%#
-<%= f.input :type, as: :radio_buttons, collection: [['City bike'], ['Road bike'], ['Mountain bake']], label: 'What type of bike is it?' %>
