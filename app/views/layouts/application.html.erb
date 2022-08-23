@@ -13,11 +13,19 @@
     <div class="main-container">
 
       <%= render "shared/navbar" %>
-      <div class="container">
+      <% unless current_page?(controller: :pages, action: :home) %>
+        <div class="container">
+      <% end %>
+          <%= yield %>
 
-        <%= yield %>
+      <% unless current_page?(controller: :pages, action: :home) %>
+        </div>
+      <% end %>
 
-      </div>
+
+
+
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= render "shared/footer" %>

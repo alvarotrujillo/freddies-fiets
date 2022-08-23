@@ -1,16 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= image_path("beachphoto.jpg") %>')">
-  <div class="container">
+<%= render "components/banner" %>
 
-    <h1>Freddie's Fiets</h1>
-    <p>You want to ride your bicycle, biiiclycle, BICYCLE</p>
-    <a class="btn btn-flat" href="#">Register now!</a>
+
+<div class="container index">
+  <h3> Greatist Hits</h3>
+  <div class="cards">
+    <%= render "components/card" %>
   </div>
-</div>
-
-<div class="container">
-  <h3>Check out the most popular bikes!</h3>
-  <ul class="container d-flex">
-    <li class="card"> Rolls-Royce Bike <br> "Insert photo here" </li>
-    <li class="card"> Most comfortable city bike! <br> "Insert photo here" </li>
-  </ul>
 </div>
