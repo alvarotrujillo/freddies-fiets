@@ -113,7 +113,7 @@ puts 'Creating 10 road bikes...'
 #       bike_type: ['Single-speed bike', 'Fixie bike'].sample,
 #       location: Faker::Address.city,
 #       description: Faker::Lorem,
-#       gears: '1',
+#       gears: 'No gears',
 #       hand_brakes: [true, false].sample,
 #       user: User.all.sample,
 #       price: rand(70..300)
@@ -168,7 +168,7 @@ puts 'Creating 10 road bikes...'
 #       bike_type: 'BMX bike',
 #       location: Faker::Address.city,
 #       description: Faker::Lorem,
-#       gears: '1',
+#       gears: 'No gears',
 #       hand_brakes: [true, false].sample,
 #       user: User.all.sample,
 #       price: rand(70..300)
@@ -193,7 +193,7 @@ puts 'Creating 10 road bikes...'
 #       bike_type: "Cargo bike",
 #       location: Faker::Address.city,
 #       description: Faker::Lorem,
-#       gears: ['1', '7', '21'].sample,
+#       gears: ['No gears', '7', '21'].sample,
 #       hand_brakes: true,
 #       user: User.all.sample,
 #       price: rand(70..300)
