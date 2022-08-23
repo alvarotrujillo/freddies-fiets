@@ -7,6 +7,10 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
+  def show
+    @bike = Bike.find(params[:id])
+  end
+
   def create
     @bike = Bike.new(bike_params)
     @bike.user = current_user
