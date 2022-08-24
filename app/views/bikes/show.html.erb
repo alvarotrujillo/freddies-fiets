@@ -9,7 +9,8 @@
           <p><strong>Gears:</strong> <%= @bike.gears %></p>
           <p><strong>Description from the owner:</strong> <%= @bike.description %></p>
           <p><strong>Price per day:</strong> €<%= @bike.price %></p>
-          <button type="button" class="btn btn-primary">Book now!</button>
+          <button type="button" class="btn btn-primary"><%= link_to "Book now!", :back %></button>
+          <button type="button" class="btn btn-dark"><%= link_to "Back", :back %></button>
         </div>
         <%# Add logic so that booking is only available for bikes that are free,
         possibility of end-date being added %>
