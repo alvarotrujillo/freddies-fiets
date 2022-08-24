@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   end
 
   def account
+    if !user_signed_in?
+      redirect_to root_path, notice: "Please, sign in"
+    end
+
     @user_bikes = Bike.where(user: current_user)
     @user_bookings = Booking.where(user: current_user)
   end
