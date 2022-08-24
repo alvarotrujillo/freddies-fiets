@@ -17,7 +17,7 @@
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h3 class="fw-bold">Your bikes</h3>
-        <%= link_to "List a new bike",  bikes_new_path(current_user) %>
+        <%= link_to "List a new bike",  new_bike_path(current_user) %>
       </div>
       <br>
       <% @user_bikes.each do |bike| %>
