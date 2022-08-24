@@ -1,8 +1,14 @@
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+<%= link_to bike_path(bike) do %>
+  <div class="card-product mt-2">
+    <%= cl_image_tag(bike.photo.key) %>
+    <div class="card-product-infos">
+        <div class="d-flex justify-content-between">
+          <h2><%= bike.name %></h2>
+          <%= link_to "Edit your bike", edit_bike_path(bike) %>
+      </div>
+      <p>Current rental price: <%= bike.price %>€</p>
+      <p>My bike is free to rent? <%= bike.active %></p>
+    </div>
   </div>
-</div>
+<% end %>
 

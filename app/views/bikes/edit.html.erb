@@ -1,0 +1,19 @@
+<div class="main-content pt-4 container">
+
+<h1>Bike Editing</h1>
+
+<br>
+
+<%= simple_form_for [@bike] do |f| %>
+  <%= f.input :name, label: 'What brand & model is your bike?' %>
+  <%= f.input :bike_type, as: :radio_buttons, collection: Bike::CATEGORIES, label: 'What type of bike do you have?' %>
+  <%= f.input :location, label: 'What city is your bike in?' %>
+  <%= f.input :description, label: 'Provide a brief description of your bike' %>
+  <%= f.input :gears, as: :radio_buttons, collection: Bike:: GEARS, label: 'How many gears does your bike have?' %>
+  <%= f.input :hand_brakes, as: :boolean, label: 'Tick here if the bike has hand-brakes' %>
+  <%= f.input :photo, as: :file, label: 'Upload a photo of your bike' %>
+  <%= f.input :price, label: 'How much is a per day rental?' %>
+  <%= f.input :active, as: :boolean, label: "Activate or deactivate" %>
+  <%= f.submit 'Update your bike' %>
+<% end %>
+</div>
