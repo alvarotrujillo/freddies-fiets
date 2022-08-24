@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_092052) do
     t.text "description"
     t.string "gears"
     t.boolean "hand_brakes"
-    t.integer "price"
+    t.float "price"
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

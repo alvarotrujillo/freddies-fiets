@@ -14,7 +14,7 @@ road_10pics = %w[
   v1661180400/FreddieFiets/road1_dxpgsy.png
 ]
 mtb_10pics = %w[
-  v1661180400/FreddieFiets/mtb10_a82keo.png
+  https://res.cloudinary.com/lluz/image/upload/v1661180400/FreddieFiets/mtb10_a82keo.png
   v1661180400/FreddieFiets/mtb9_trhsjd.png
   v1661180399/FreddieFiets/mtb8_nszgkr.png
   v1661180399/FreddieFiets/mtb3_kxwcqj.png

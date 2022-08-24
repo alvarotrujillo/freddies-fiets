@@ -1,6 +1,7 @@
 <div class="card-trip">
-  <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
-  <%= cl_image_tag(bike.photo.key) %>
+  <div class="bike-link-image">
+  <%= link_to cl_image_tag(bike.photo.key), bike_path(bike) %>
+  </div>
   <div class="card-trip-infos">
     <div>
       <h2><%= bike.name %></h2>
