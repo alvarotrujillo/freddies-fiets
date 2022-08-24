@@ -15,5 +15,4 @@ class PagesController < ApplicationController
 end
 
 
-
 User.where("name = :name and email = :email", { name: "Joe", email: "joe@example.com" })
