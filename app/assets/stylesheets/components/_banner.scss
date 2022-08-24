@@ -1,12 +1,14 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  width: 100%;
+  // padding: 150px 0;
+  // width: 100%;
   height: 100vh;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+  // overflow: hidden;
+  // position: relative;
+  z-index: 0;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero img {
@@ -18,7 +20,7 @@
 
 .hero-text {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   z-index: 10;
   position: relative;

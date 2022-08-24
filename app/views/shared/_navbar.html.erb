@@ -17,6 +17,9 @@ uncomment the lines of the ERB code which are commented out below. %>
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
+            <%= link_to "All bikes", bikes_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
             <%= link_to "Dashboard", account_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
@@ -28,6 +31,9 @@ uncomment the lines of the ERB code which are commented out below. %>
             </div>
           </li>
         <% else %>
+          <li class="nav-item">
+            <%= link_to "All bikes", bikes_path, class: "nav-link" %>
+          </li>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>

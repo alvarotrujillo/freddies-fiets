@@ -1,0 +1,9 @@
+<div class="card-product mt-2">
+  <%= cl_image_tag(bike.photo.key) %>
+  <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
+  <div class="card-product-infos">
+    <h2><%= bike.name %></h2>
+    <p>Current rental price: <%= bike.price %>€</p>
+    <p>My bike is free to rent? <%= bike.active %></p>
+  </div>
+</div>

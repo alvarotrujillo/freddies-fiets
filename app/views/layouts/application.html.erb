@@ -10,25 +10,9 @@
   </head>
 
   <body>
-    <div class="main-container">
-
-      <%= render "shared/navbar" %>
-      <% unless current_page?(controller: :pages, action: :home) %>
-        <div class="container">
-      <% end %>
-          <%= yield %>
-
-      <% unless current_page?(controller: :pages, action: :home) %>
-        </div>
-      <% end %>
-
-
-
-
-
-      <%= render "shared/footer" %>
-      <%= render "components/alert" %>
-
-    </div>
+    <%= render "shared/navbar" %>
+        <%= yield %>
+    <%= render "shared/footer" %>
+    <%= render "components/alert" %>
   </body>
 </html>
