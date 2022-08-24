@@ -17,8 +17,7 @@ class BookingsController < ApplicationController
 
 
     if @booking.save!
-      redirect_to bike_path
-      # (@booking.bike)
+      redirect_to bike_path(params[:bike_id])
     end
 
   end
