@@ -16,4 +16,5 @@ class Bike < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :gears, inclusion: { in: GEARS }
+  validates :photo, presence: true
 end
