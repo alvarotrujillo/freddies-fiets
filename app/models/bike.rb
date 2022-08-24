@@ -1,6 +1,8 @@
 class Bike < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_many :users, through: :bookings
+  
   has_one_attached :photo
   # to be added to the form  <%= f.input :photo, as: :file %>
     # def article_params

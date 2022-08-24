@@ -29,7 +29,20 @@
   <div class="card bg-light mb-3">
     <div class="card-body">
       <h3 class="fw-bold">Your bookings</h3>
-      <%= @user_bookings %>
+      <p>The bike(s) you are currently renting are:</p>
+      <%# <br>
+      <% @user_bookings.each do |user_booking| %>
+        <%# <%= render "views/bookings/index", bike: bike %>
+      <%# <% end %>
+      <% @user_bookings.each do |user_booking| %>
+        <h2>Rental information for: <%= user_booking.bike.name %> (<%= user_booking.bike.bike_type %>)</h2>
+        <p><strong>Renting period: </strong><%= (user_booking.end_date-user_booking.start_date).to_i %> days</p>
+
+        <p><strong>Start date: </strong><%= user_booking.start_date %></p>
+        <p><strong>End date: </strong><%= user_booking.end_date %></p>
+
+        <p><strong>City: </strong> <%= user_booking.bike.location %></p>
+      <% end %>
     </div>
   </div>
 </div>

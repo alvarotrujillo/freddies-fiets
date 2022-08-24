@@ -1,0 +1,14 @@
+
+<div class="main-content pt-4 container">
+
+  <h1 class="fw-bold">Freddie's Fiets Booking confirmation </h1><br>
+  <h4>Hello <%= current_user.first_name %></h4>
+  <p>The bike you are requesting is: <%= Bike.find(params[:bike_id]).name %> (<%=Bike.find(params[:bike_id]).bike_type %>)</p><br>
+
+
+  <%= simple_form_for [@bike, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit class: "btn btn-flat"  %>
+  <% end %>
+</div>
