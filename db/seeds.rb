@@ -40,6 +40,7 @@ increment = 0 # var used to select different pics
 
 # Test Bikes Credentials for Freddie user below!
 
+
 bike = Bike.new(
   name: "Folding Bike",
   bike_type: "City bike",
