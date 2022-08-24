@@ -39,7 +39,7 @@ puts 'Initializing bikes creation'
 increment = 0 # var used to select different pics
 
 # Test Bikes Credentials for Alvaro user below!
-# Bike.create!(name: "Get me there", bike_type: "Cargo bike", location: "Amsterdam", description: "It will take you there, don't worry", gears: "3", hand_brakes: true, price: 20, active: true, user_id: 1)
+# Bike.create!(name: "Get me there", bike_type: "Cargo bike", location: "Amsterdam", description: "It will take you there, don't worry", gears: "3", hand_brakes: true, price: 20, active: true, user: User.where(email: "test123@test.com"))
 
 puts 'Creating 10 road bikes...'
   road_10pics = %w[
