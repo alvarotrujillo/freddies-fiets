@@ -7,7 +7,6 @@ class Bike < ApplicationRecord
       # params.require(:article).permit(:title, :body, :photo)
     # end
 
-
   CATEGORIES = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike']
   GEARS = ['No gears', '3', '7', '18', '21', '28']
 

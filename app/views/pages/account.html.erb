@@ -1,20 +1,24 @@
 
 <div class="main-content pt-4 container">
-
-  <h1 class="fw-bold">Freddie's Fiets Dashboard</h1>
+    <h1 class="fw-bold">Freddie's Fiets Dashboard</h1>
   <div class="card bg-light mb-3">
     <div class="card-body">
-      <h3 class="fw-bold">User details </h3>
+      <div class="d-flex justify-content-between">
+        <h3 class="fw-bold">User details </h3>
+        <%= link_to "Edit your user details", edit_user_registration_path(current_user) %>
+      </div>
       <p>First name: <%=current_user.first_name %></p>
       <p>Last name: <%=current_user.last_name %></p>
       <p>e-mail: <%=current_user.email %></p>
-      <%= link_to "Edit your details",  edit_user_registration_path(current_user) %>
     </div>
   </div>
 
   <div class="card bg-light mb-3">
     <div class="card-body">
-      <h3 class="fw-bold">Your bikes</h3>
+      <div class="d-flex justify-content-between">
+        <h3 class="fw-bold">Your bikes</h3>
+        <%= link_to "List a new bike",  bikes_new_path(current_user) %>
+      </div>
       <br>
       <% @user_bikes.each do |bike| %>
         <%= render "components/cardproductbike", bike: bike %>
