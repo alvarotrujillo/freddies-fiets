@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @myBookings = Booking.where(user: current_user)
+    @myBookings = Booking.where(user: current_user).order(:start_date)
   end
 
   def new
@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
 
 
     if @booking.save!
-      redirect_to bike_path(params[:bike_id])
+      redirect_to bookings_path
     end
 
   end
