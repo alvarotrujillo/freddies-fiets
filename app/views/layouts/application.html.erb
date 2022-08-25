@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
     <meta name="description" content="Don't Stop (Me) Now: Rent a Bike!<br>You want to ride your bicycle, biiicycle, BICYCLE">
     <meta name="keywords" content="Bike, Rent, Le Wagon">
     <meta name="author" content="Adriene, Alvaro, Lucas and Ono (Le Wagon Web Dev 922)">
@@ -17,6 +18,7 @@
     class="page-container"
     data-controller="navbar"
   >
+
     <div class="navbar-container"> <%# section 1/3 %>
       <%= render "shared/navbar" %>
     </div>
@@ -28,8 +30,8 @@
       <%= render "shared/footer" %>
     </div>
   </div>
-
-
+  
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 
   </body>
 </html>

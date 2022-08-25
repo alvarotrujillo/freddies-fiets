@@ -6,11 +6,12 @@
   justify-content: space-between;
 }
 
+
 .navbar-transparent {
   background-color: rgba(255,255,255,0.3);
-}
+  }
 .navbar-babyblue {
-  background-color: $blue;
+  background-color: $ff_secondary;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
