@@ -4,11 +4,10 @@
     <div class="card-product-infos">
         <div class="d-flex justify-content-between">
           <h2><%= bike.name %></h2>
-          <%= link_to "Edit your bike", edit_bike_path(bike) %>
-      </div>
-      <p>Current rental price: <%= bike.price %>€</p>
-      <p>My bike is free to rent? <%= bike.active %></p>
+          <%= link_to "Edit", edit_bike_path(bike) %>
+        </div>
+      <p><%= bike.price %>€</p>
+      <p><%= bike.active ? "Available for rental" : "Not available" %></p>
     </div>
   </div>
 <% end %>
-
