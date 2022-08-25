@@ -6,7 +6,7 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <div class="cards">
-    <% bike_markers = Bike.near(current_user.address, 3)  %>
+    <% bike_markers = Bike.near(current_user.address, 15)  %>
     <% bike_markers.each do |bike| %>
     <%= render "components/cardtrip", bike: bike %>
     <% end %>
