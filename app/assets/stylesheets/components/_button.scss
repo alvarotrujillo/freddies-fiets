@@ -1,7 +1,7 @@
 .btn-ghost {
-  color: $gray;
-  border: 1px solid #4A4A4A;
-  background: $ff_primary;
+  color: $gray !important;
+  // border: 1px solid #4A4A4A;
+  background: $ff_secondary;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -10,8 +10,8 @@
 }
 
 .btn-ghost:hover {
-  // opacity: 1;
-  background: $ff_primary_dark;
+  opacity: 1;
+  background: $ff_secondary !important;
 }
 
 .btn-flat {
