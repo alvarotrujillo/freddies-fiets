@@ -3,7 +3,7 @@
 <div class="container index">
   <h2 class="subheading">Bikes on offer</h2>
   <div class="cards">
-    <% displayed_bikes = @bikes.first(6) %>
+    <% displayed_bikes = @bikes.sample((6)) %>
     <% displayed_bikes.each do |bike| %>
     <%= render "components/cardtrip", bike: bike %>
     <% end %>
