@@ -1,20 +1,19 @@
 <%= link_to bike_path(bike) do %>
-  <div class="card-product mt-2">
+  <div class="card-product <%= "grayscale" if !bike.active %> mt-2">
     <%= cl_image_tag(bike.photo.key) %>
+    <div class="d-flex justify-content-end">
+      <%= link_to change_path(bike.id), data:{turbo_method: :patch} do %>
+        <i class="icon-booked fa-solid <%= bike.active ? "fa-solid fa-person-biking fa-lg" : "fa-solid fa-ban fa-lg" %> p-2"></i>
+      <% end %>
+    </div>
+
     <div class="card-product-infos">
-        <div class="d-flex justify-content-between">
-          <h2><%= bike.name %></h2>
-          <%= link_to "Edit", edit_bike_path(bike), class: "btn btn-ghost" %>
-        </div>
-        <div class="d-flex justify-content-between align-items-end">
-          <div>
-            <p><%= bike.price %>€</p>
-            <p><%= bike.active ? "Available for rental" : "Not available" %></p>
-          </div>
-              <%= link_to change_path(bike.id), data:{turbo_method: :patch} do %>
-                <i class="fa-solid <%= bike.active ? "fa-check" : "fa-x" %> p-2"></i>
-              <% end %>
-        </div>
+      <div class="d-flex justify-content-between">
+        <h2><%= bike.name %></h2>
+        <%= link_to "Edit", edit_bike_path(bike), class: "btn btn-ghost" %>
+      </div>
+      <p><%= bike.price %>€</p>
+      <h6><%= bike.active ? "Available for rental" : "Not available for rental" %></h6>
     </div>
   </div>
 <% end %>
