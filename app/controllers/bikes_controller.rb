@@ -9,7 +9,8 @@ class BikesController < ApplicationController
     @markers = @bikes.geocoded.map do |bike|
       {
         lat: bike.latitude,
-        lng: bike.longitude
+        lng: bike.longitude,
+        near_me: render_to_string(partial: "near_me", locals: {bike: bike})
       }
     end
   end
