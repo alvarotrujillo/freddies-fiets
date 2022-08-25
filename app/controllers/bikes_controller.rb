@@ -1,6 +1,6 @@
 class BikesController < ApplicationController
   def index
-    @bikes = Bike.all
+    @bikes = Bike.where(active: true)
   end
 
   def new
