@@ -2,13 +2,15 @@
 <div class="main-content pt-4 container">
 
   <h1 class="fw-bold">Freddie's Fiets Bookings Index</h1>
-  <% @bookings.each do |booking| %>
-    <h2>Rental information for: <%= booking.bike.name %> (<%= booking.bike.bike_type %>)</h2>
+  <% @myBookings.each do |booking| %>
+    <br>
+    <h2>Rental information for: <%= link_to booking.bike.name, bike_path(booking.bike) %> (<%= booking.bike.bike_type %>)</h2>
     <p><strong>Renting period: </strong><%= (booking.end_date-booking.start_date).to_i %> days</p>
 
     <p><strong>Start date: </strong><%= booking.start_date %></p>
     <p><strong>End date: </strong><%= booking.end_date %></p>
 
     <p><strong>City: </strong> <%= booking.bike.location %></p>
+    <p><strong>Total price: </strong> <%= booking.bike.price * (booking.end_date-booking.start_date).to_i %> €</p>
   <% end %>
 </div>

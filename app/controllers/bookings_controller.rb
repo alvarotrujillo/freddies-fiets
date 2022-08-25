@@ -1,9 +1,12 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @myBookings = Booking.where(user: current_user).order(:start_date)
   end
 
   def new
+    if !user_signed_in?
+      redirect_to new_user_session_path, notice: "Please, sign in"
+    end
     @booking = Booking.new
     @bike = Bike.find(params[:bike_id])
   end
@@ -17,7 +20,7 @@ class BookingsController < ApplicationController
 
 
     if @booking.save!
-      redirect_to bike_path(params[:bike_id])
+      redirect_to bookings_path
     end
 
   end

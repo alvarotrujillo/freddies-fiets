@@ -1,6 +1,6 @@
 class BikesController < ApplicationController
   def index
-    @bikes = Bike.all
+    @bikes = Bike.where(active: true)
   end
 
   def new
@@ -25,7 +25,7 @@ end
     @bike.user = current_user
 
     if @bike.save
-      redirect_to bikes_index_path
+      redirect_to bike_path(@bike)
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,7 +38,7 @@ end
   def update
     @bike = Bike.find(params[:id])
     @bike.update(bike_params)
-    redirect_to account_path(current_user)
+    redirect_to bike_path(@bike)
   end
 
   private
