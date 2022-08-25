@@ -20,7 +20,7 @@ class BikesController < ApplicationController
   end
 
 def categories
-  @categories = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike']
+  @categories = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Fixie bike']
 end
 
   def filter

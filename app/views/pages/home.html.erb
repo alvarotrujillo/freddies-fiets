@@ -1,8 +1,6 @@
 <%= render "components/banner" %>
-
-<%= render "components/buttonfilter"%>
-
 <div class="container index">
+<%= render "components/buttonfilter"%>
   <h2 class="subheading">Bikes on offer</h2>
   <div class="cards">
     <% displayed_bikes = @bikes.sample((6)) %>
@@ -10,5 +8,4 @@
     <%= render "components/cardtrip", bike: bike %>
     <% end %>
   </div>
-
 </div>

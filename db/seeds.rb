@@ -88,7 +88,7 @@ bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 bike.save!
 bike = Bike.new(
   name: "Rat bike (Brooks saddle)",
-  bike_type: "Single-speed bike",
+  bike_type: "City bike",
   location: "Diemen",
   description: "Fast define this low maintenance bike",
   gears: "7",
@@ -182,7 +182,7 @@ fixie_10pics = %w[
 10.times do
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
-    bike_type: ['Single-speed bike', 'Fixie bike'].sample,
+    bike_type: ['City bike', 'Fixie bike'].sample,
     location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: 'No gears',
