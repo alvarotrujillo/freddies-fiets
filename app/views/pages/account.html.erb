@@ -5,7 +5,7 @@
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h3 class="fw-bold">User details </h3>
-        <%= link_to "Edit your user details", edit_user_registration_path(current_user) %>
+        <%= link_to "Edit your user details", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
       </div>
       <p>First name: <%=current_user.first_name %></p>
       <p>Last name: <%=current_user.last_name %></p>
@@ -17,7 +17,7 @@
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h3 class="fw-bold">Your bikes</h3>
-        <%= link_to "List a new bike",  new_bike_path(current_user) %>
+        <%= link_to "List a new bike",  new_bike_path(current_user), class: "btn btn-ghost" %>
       </div>
       <br>
       <% @user_bikes.each do |bike| %>
