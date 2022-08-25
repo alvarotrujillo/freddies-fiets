@@ -1,7 +1,6 @@
 class BikesController < ApplicationController
   def index
     @bikes = Bike.all
-
   end
 
   def near_me
@@ -10,7 +9,8 @@ class BikesController < ApplicationController
       {
         lat: bike.latitude,
         lng: bike.longitude,
-        near_me: render_to_string(partial: "near_me", locals: {bike: bike})
+        info_window: render_to_string(partial: "info_window", locals: {bike: bike}),
+        image_url: helpers.asset_url("freddiefiets.png")
       }
     end
   end

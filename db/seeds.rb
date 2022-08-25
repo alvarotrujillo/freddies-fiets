@@ -29,7 +29,7 @@ puts 'Creating 10 + 1 users...'
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     password: 'batch929',
-    address: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample
+    address: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample
   )
   user.save!
 end
@@ -119,7 +119,7 @@ road_10pics = %w[
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
     bike_type: 'Road bike',
-    location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
+    location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: ['18', '21', '28'].sample,
     hand_brakes: true,
@@ -151,7 +151,7 @@ mtb_10pics = %w[
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
     bike_type: 'Mountain bike',
-    location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
+    location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: ['18', '21', '28'].sample,
     hand_brakes: true,
@@ -183,7 +183,7 @@ fixie_10pics = %w[
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
     bike_type: ['Single-speed bike', 'Fixie bike'].sample,
-    location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
+    location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: 'No gears',
     hand_brakes: [true, false].sample,
@@ -215,7 +215,7 @@ city_10pics = %w[
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
     bike_type: 'City bike',
-    location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
+    location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: ['3', '7', '18', '21'].sample,
     hand_brakes: [true, false].sample,
@@ -242,7 +242,7 @@ bmx_5pics = %w[
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
     bike_type: 'BMX bike',
-    location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
+    location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: 'No gears',
     hand_brakes: [true, false].sample,
@@ -269,7 +269,7 @@ cargo_5pics = %w[
   bike = Bike.new(
     name: Faker::Music::RockBand.name,
     bike_type: "Cargo bike",
-    location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
+    location: %w[Almere Amsterdam Delft Dordrecht Haarlem Leiden Rotterdam Utrecht Zoetermeer].sample,
     description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: ['No gears', '7', '21'].sample,
     hand_brakes: true,
