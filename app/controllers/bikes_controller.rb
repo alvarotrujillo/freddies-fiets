@@ -3,6 +3,18 @@ class BikesController < ApplicationController
     @bikes = Bike.where(active: true)
   end
 
+  def near_me
+    @bikes = Bike.near(current_user.address, 15)
+    @markers = @bikes.geocoded.map do |bike|
+      {
+        lat: bike.latitude,
+        lng: bike.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {bike: bike}),
+        image_url: helpers.asset_url("freddiefiets.png")
+      }
+    end
+  end
+
   def new
     @bike = Bike.new
   end
