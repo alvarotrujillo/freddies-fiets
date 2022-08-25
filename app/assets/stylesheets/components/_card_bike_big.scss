@@ -19,8 +19,9 @@
 .bb-card-text {
   text-align: center;
   padding: 8px;
-  & a {color: white;
-  text-decoration: none;}
+  & a {
+    text-decoration: none;
+  }
 }
 
 .bb-card-details > img {
