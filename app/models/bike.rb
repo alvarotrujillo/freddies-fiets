@@ -2,14 +2,16 @@ class Bike < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_many :users, through: :bookings
-  
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
   has_one_attached :photo
   # to be added to the form  <%= f.input :photo, as: :file %>
     # def article_params
       # params.require(:article).permit(:title, :body, :photo)
     # end
 
-  CATEGORIES = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike']
+  CATEGORIES = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Fixie bike']
   GEARS = ['No gears', '3', '7', '18', '21', '28']
 
   validates :name, presence: true

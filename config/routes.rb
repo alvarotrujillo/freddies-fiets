@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/account', to: 'pages#account'
 
   get '/bookings', to: 'bookings#index'
+
+  get '/near_me', to: 'bikes#near_me'
   get '/filter', to: 'bikes#filter'
 
   # Defines the root path route ("/")
