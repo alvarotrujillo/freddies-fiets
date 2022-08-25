@@ -12,11 +12,12 @@ Rails.application.routes.draw do
   get '/bookings', to: 'bookings#index'
 
   get '/near_me', to: 'bikes#near_me'
+  get '/filter', to: 'bikes#filter'
 
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :bikes, only: %i[index new create show update edit] do
+  resources :bikes, only: %i[index new create show update edit filter] do
     resources :bookings, only: %i[new create]
   end
 

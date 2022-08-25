@@ -1,6 +1,6 @@
 class BikesController < ApplicationController
   def index
-    @bikes = Bike.all
+    @bikes = Bike.where(active: true)
   end
 
   def near_me
@@ -19,6 +19,15 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
+def categories
+  @categories = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike']
+end
+
+  def filter
+    @bike_type_query = params[:bike_type]
+    @bikes = Bike.where(bike_type: @bike_type_query)
+  end
+
   def show
     @bike = Bike.find(params[:id])
   end
@@ -28,7 +37,7 @@ class BikesController < ApplicationController
     @bike.user = current_user
 
     if @bike.save
-      redirect_to bikes_index_path
+      redirect_to bike_path(@bike)
     else
       render :new, status: :unprocessable_entity
     end
@@ -41,7 +50,7 @@ class BikesController < ApplicationController
   def update
     @bike = Bike.find(params[:id])
     @bike.update(bike_params)
-    redirect_to account_path(current_user)
+    redirect_to bike_path(@bike)
   end
 
   private

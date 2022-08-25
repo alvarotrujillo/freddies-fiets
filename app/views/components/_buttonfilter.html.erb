@@ -1,0 +1,6 @@
+<div class=" display-buttons-filter ">
+  <% @categories = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike'] %>
+    <% @categories.each do |cat| %>
+    <%= link_to cat, filter_path(bike_type: cat), class: "btn truncate btn-ghost" %>
+  <% end %>
+</div>

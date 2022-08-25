@@ -14,10 +14,21 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-        <%= yield %>
-    <%= render "shared/footer" %>
-    <%= render "components/alert" %>
+  
+  <div class="page-container">
+    <div class="navbar-container"> <%# section 1/3 %>
+      <%= render "shared/navbar" %>
+    </div>
+    <div class="content-container"> <%# section 2/3 %>
+      <%= yield %>
+      <%= render "components/alert" %>
+    </div>
+    <div class="footer-container"> <%# section 3/3 %>
+      <%= render "shared/footer" %>
+    </div>
+  </div>
+  
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+
   </body>
 </html>

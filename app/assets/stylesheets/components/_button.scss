@@ -13,16 +13,18 @@
 }
 
 .btn-flat {
-  color: #FEFEFB;
+  color: white;
+  // box-shadow: 1px 1px 3px rgb(0 0 0 / 80%);
+  // text-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
   padding: 8px 24px;
   border-radius: 4px;
-  background: $ff_secondary;
+  background: $ff_primary;
   transition: background 0.3s ease;
   font-size: 24px;
 }
 
 .btn-flat:hover {
-  background: $ff_secondary_dark;
+  background: $ff_primary_dark;
   color: #FEFEFB;
 }
 
