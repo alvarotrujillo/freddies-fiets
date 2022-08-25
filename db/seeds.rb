@@ -9,6 +9,8 @@ require "open-uri"
 
 
 puts "Cleaning database..."
+puts "... bookings"
+Booking.destroy_all
 puts "... bikes"
 Bike.destroy_all
 puts "... users"
@@ -181,7 +183,7 @@ fixie_10pics = %w[
     name: Faker::Music::RockBand.name,
     bike_type: ['Single-speed bike', 'Fixie bike'].sample,
     location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
-    description: Faker::Lorem,
+    description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: 'No gears',
     hand_brakes: [true, false].sample,
     user: User.all.sample,
@@ -213,7 +215,7 @@ city_10pics = %w[
     name: Faker::Music::RockBand.name,
     bike_type: 'City bike',
     location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
-    description: Faker::Lorem,
+    description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: ['3', '7', '18', '21'].sample,
     hand_brakes: [true, false].sample,
     user: User.all.sample,
@@ -240,7 +242,7 @@ bmx_5pics = %w[
     name: Faker::Music::RockBand.name,
     bike_type: 'BMX bike',
     location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
-    description: Faker::Lorem,
+    description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: 'No gears',
     hand_brakes: [true, false].sample,
     user: User.all.sample,
@@ -267,7 +269,7 @@ cargo_5pics = %w[
     name: Faker::Music::RockBand.name,
     bike_type: "Cargo bike",
     location: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample,
-    description: Faker::Lorem,
+    description: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4),
     gears: ['No gears', '7', '21'].sample,
     hand_brakes: true,
     user: User.all.sample,

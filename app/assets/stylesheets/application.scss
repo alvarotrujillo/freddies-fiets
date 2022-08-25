@@ -19,3 +19,8 @@ $ff_four_dark: #be5821d0;
 @import "components/index";
 @import "pages/index";
 @import "shared/index";
+
+a {
+  text-decoration: none;
+  color: initial;
+}
