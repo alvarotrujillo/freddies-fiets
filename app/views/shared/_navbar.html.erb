@@ -20,7 +20,7 @@ uncomment the lines of the ERB code which are commented out below. %>
             <%= link_to "All bikes", bikes_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Near me", near_me_path(current_user), class: "nav-link" %>
+            <%= link_to "Near me", near_me_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
             <%= link_to "My bookings", bookings_path(current_user), class: "nav-link" %>

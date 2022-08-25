@@ -4,7 +4,7 @@ class BikesController < ApplicationController
   end
 
   def near_me
-    @bikes = Bike.all
+    @bikes = Bike.near(current_user.address, 15)
     @markers = @bikes.geocoded.map do |bike|
       {
         lat: bike.latitude,
