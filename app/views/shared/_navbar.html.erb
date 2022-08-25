@@ -2,7 +2,11 @@
 <%# ‼️ Important: This is a static navbar. To enable the login/logout logic in your Rails project,
 uncomment the lines of the ERB code which are commented out below. %>
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div
+  class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-babyblue"
+  data-navbar-target="navbar"
+  data-action="scroll@window->navbar#updateNavbar"
+>
   <div class="container-fluid">
     <%= link_to root_path,  class: "navbar-brand" do %>
       <%= image_tag "freddiefiets.png" %>
