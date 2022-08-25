@@ -18,6 +18,10 @@
       <%= f.input :last_name,
                   required: false,
                   input_html: { autocomplete: "new-last name" } %>
+      <%= f.input :address,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Address" } %>
       <%= f.input :password,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
