@@ -7,6 +7,15 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
+def categories
+  @categories = ['City bike', 'Road bike', 'BMX bike', 'Cargo bike', 'Mountain bike', 'Single-speed bike', 'Fixie bike']
+end
+
+  def filter
+    @bike_type_query = params[:bike_type]
+    @bikes = Bike.where(bike_type: @bike_type_query)
+  end
+
   def show
     @bike = Bike.find(params[:id])
   end

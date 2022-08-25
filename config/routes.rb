@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   get '/account', to: 'pages#account'
 
   get '/bookings', to: 'bookings#index'
-
+  get '/filter', to: 'bikes#filter'
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :bikes, only: %i[index new create show] do
+  resources :bikes, only: %i[index new create show filter] do
     resources :bookings, only: %i[new create]
   end
   # resources :pages
