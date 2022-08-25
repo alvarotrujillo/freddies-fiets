@@ -30,7 +30,11 @@
 .card-product .card-product-infos {
   padding: 16px;
   color: black !important;
+  // next line is to put the text of edit bike on the right
+  flex: 1;
+
 }
 a {
   text-decoration: none;
+  color:initial;
 }

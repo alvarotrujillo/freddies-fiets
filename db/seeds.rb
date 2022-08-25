@@ -9,6 +9,8 @@ require "open-uri"
 
 
 puts "Cleaning database..."
+puts "... bookings"
+Booking.destroy_all
 puts "... bikes"
 Bike.destroy_all
 puts "... users"
