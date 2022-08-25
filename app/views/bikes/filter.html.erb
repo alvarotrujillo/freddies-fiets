@@ -1,9 +1,10 @@
 <div class="main-content pt-4 container">
 
-    <h1><%= @bike_type_query %></h1>
+    <h1><%= @bike_type_query %>s</h1>
     <div class="cards">
   <% @bikes.each do |bike| %>
     <%= render "components/cardtrip", bike: bike %>
   <% end %>
   </div>
 </div>
+
