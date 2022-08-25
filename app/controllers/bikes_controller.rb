@@ -29,7 +29,7 @@ class BikesController < ApplicationController
   def update
     @bike = Bike.find(params[:id])
     @bike.update(bike_params)
-    redirect_to account_path(current_user)
+    redirect_to bike_path(@bike)
   end
 
   private

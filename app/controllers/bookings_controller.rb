@@ -4,6 +4,9 @@ class BookingsController < ApplicationController
   end
 
   def new
+    if !user_signed_in?
+      redirect_to new_user_session_path, notice: "Please, sign in"
+    end
     @booking = Booking.new
     @bike = Bike.find(params[:bike_id])
   end
