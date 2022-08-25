@@ -8,7 +8,7 @@
           <p><strong>Type of bike:</strong> <%= @bike.bike_type %></p>
           <p><strong>Gears:</strong> <%= @bike.gears %></p>
           <p><strong>Description from the owner:</strong> <%= @bike.description %></p>
-          <p><strong>Price per day:</strong> €<%= @bike.price %></p>
+          <p><%= @bike.price %>€</p>
           <button type="button" class="btn btn-dark"><%= link_to "Back", :back %></button>
           <% if current_user == @bike.user %>
              <button type="button" class="btn btn-dark"><%= link_to "Edit your bike", edit_bike_path(@bike.id) %></button>
@@ -18,8 +18,7 @@
             <button type="button" class="btn btn-dark"><%= link_to "Log in to rent this bike", new_user_session_path %></button>
           <% end %>
         </div>
-        <%# Add logic so that booking is only available for bikes that are free,
-        possibility of end-date being added %>
+        <%# Add logic so possibility of end-date being added %>
       </div>
     </div>
 </div>

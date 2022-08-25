@@ -1,11 +1,10 @@
 <div class="main-content pt-4 container">
   <h1>Bicycles, bicycles, bicycles</h1>
-<%= render "components/buttonfilter"%>
+  <%= render "components/buttonfilter"%>
 
   <div class="cards">
   <% @bikes.each do |bike| %>
     <%= render "components/cardtrip", bike: bike %>
   <% end %>
-  </div>
   </div>
 </div>
