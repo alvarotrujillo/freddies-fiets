@@ -18,7 +18,7 @@ User.destroy_all
 puts "Database is clean."
 
 # Test User Credentials below!
-Freddie = User.create!(email: "freddie@test.com", first_name: "Freddie", last_name: "Mercury", password: 'batch929')
+Freddie = User.create!(email: "freddie@test.com", first_name: "Freddie", last_name: "Mercury", password: 'batch929', address: "Rotterdam")
 
 puts User.first.id
 
@@ -28,7 +28,8 @@ puts 'Creating 10 + 1 users...'
     email: Faker::Internet.email,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    password: 'batch929'
+    password: 'batch929',
+    address: %w[Almere Amsterdam Delft Dordrecht Haarlem The Hague Leiden Rotterdam Utrecht Zoetermeer].sample
   )
   user.save!
 end

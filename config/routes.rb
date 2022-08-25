@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/bookings', to: 'bookings#index'
 
+  get '/near_me', to: 'bikes#near_me'
 
   # Defines the root path route ("/")
   # root "articles#index"
@@ -18,6 +19,6 @@ Rails.application.routes.draw do
   resources :bikes, only: %i[index new create show update edit] do
     resources :bookings, only: %i[new create]
   end
-  
+
   # resources :pages
 end
