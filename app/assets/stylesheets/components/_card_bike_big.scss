@@ -57,6 +57,27 @@
   padding: 5px;
 }
 
+.yellow-button {
+  // position: absolute;
+  // top: 8px;
+  // bottom: 8px;
+  // right: 8px;
+  font-size: 16px;
+  color: black;
+  background-color: $yellow;
+}
+.yellow-button:hover {
+  // position: absolute;
+  // top: 8px;
+  // bottom: 8px;
+  // right: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  border: $black;
+  background-color: $yellow;
+}
+
 // .bb-card-trip h2 {
 //   font-size: 16px;
 //   font-weight: bold;
