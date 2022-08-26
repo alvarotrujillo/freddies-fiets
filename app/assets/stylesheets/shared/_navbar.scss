@@ -9,7 +9,21 @@
 
 
 .navbar-transparent {
-  background-color: rgba(255,255,255,0.3);
+  margin-top: .5rem;
+  background-color: rgba(255,255,255,0);
+    & .navbar-brand img {
+    width: 100px !important;
+    margin: -6px 0;
+    border-radius: 50%;
+    // background-color: rgba($color: #fff, $alpha: .3);
+
+    // border: 1px white solid;
+    }
+    & .navbar-nav a{
+      font-weight: 600;
+      color: white !important;
+    }
+
   }
 .navbar-yellow {
   background-color: $ff_primary;
