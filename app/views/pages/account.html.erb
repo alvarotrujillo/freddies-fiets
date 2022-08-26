@@ -2,9 +2,9 @@
 <div class="main-content pt-4 container">
     <h1 class="fw-bold">Freddie's Fiets Dashboard</h1>
   <div class="card bg-light mb-3">
-    <div class="card-body">
+    <div class="card-body ">
       <div class="d-flex justify-content-between">
-        <h3 class="fw-bold">User details </h3>
+        <h2 class="fw-bold">User details </h2>
         <%= link_to "Edit your user details", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
       </div>
       <p>First name: <%=current_user.first_name %></p>
@@ -13,22 +13,9 @@
     </div>
   </div>
 
-  <div class="card bg-light mb-3">
-    <div class="card-body">
-      <div class="d-flex justify-content-between">
-        <h3 class="fw-bold">Your bikes</h3>
-        <%= link_to "List a new bike",  new_bike_path(current_user), class: "btn btn-ghost" %>
-      </div>
-      <br>
-      <% @user_bikes.each do |bike| %>
-        <%= render "components/cardproduct", bike: bike %>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="card bg-light mb-3">
-    <div class="card-body">
-      <h3 class="fw-bold">Your bookings</h3>
+<div class="card bg-light mb-3">
+    <div class="card-body ">
+      <h2 class="fw-bold">Your bookings</h2>
       <div class="cards">
 
         <% @user_bookings.each do |user_booking| %>
@@ -38,4 +25,19 @@
       </div>
     </div>
   </div>
+
+  <div class="card bg-light mb-3">
+    <div class="card-body ">
+      <div class="d-flex justify-content-between">
+        <h2 class="fw-bold">Your bikes</h2>
+        <%= link_to "List a new bike",  new_bike_path(current_user), class: "btn btn-ghost" %>
+      </div>
+      <br>
+      <% @user_bikes.each do |bike| %>
+        <%= render "components/cardproduct", bike: bike %>
+      <% end %>
+    </div>
+  </div>
+
+
 </div>

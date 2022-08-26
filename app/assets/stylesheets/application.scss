@@ -16,12 +16,20 @@
 h1 {
   font-size: 64px;
   font-weight: 600;
-  color: $ff_primary;
-  font-family: "Cinzel", serif !important;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  color: $black;
+  font-family: $headers-font;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+h2{
+  // font-size: 64px;
+  // font-weight: 600;
+  color: $black;
+  font-family: $headers-font;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 a {
   text-decoration: none;
   color: initial;
+
 }
