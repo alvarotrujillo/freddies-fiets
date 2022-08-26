@@ -51,7 +51,7 @@ bike = Bike.new(
   description: "The perfect solution for a hybrid commute as you can fold it and carry in the public transport",
   gears: "7",
   hand_brakes: true,
-  price: 60,
+  price: 12,
   active: true,
   user_id: User.first.id
 )
@@ -65,7 +65,7 @@ bike = Bike.new(
   description: "The ultimate hipster bike at your service",
   gears: "No gears",
   hand_brakes: true,
-  price: 35,
+  price: 10,
   active: true,
   user_id: User.first.id
 )
@@ -79,7 +79,7 @@ bike = Bike.new(
   description: "The all around dutch bike with, full of storage and optional Baby Carrier",
   gears: "7",
   hand_brakes: true,
-  price: 75,
+  price: 10,
   active: true,
   user_id: User.first.id
 )
@@ -93,7 +93,7 @@ bike = Bike.new(
   description: "Fast define this low maintenance bike",
   gears: "7",
   hand_brakes: false,
-  price: 50,
+  price: 12,
   active: true,
   user_id: User.first.id
 )
@@ -124,7 +124,7 @@ road_10pics = %w[
     gears: ['18', '21', '28'].sample,
     hand_brakes: true,
     user: User.all.sample,
-    price: rand(70..300)
+    price: rand(5..25)
   )
   file = URI.open("https://res.cloudinary.com/lluz/image/upload/#{road_10pics[increment]}")
   bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -156,7 +156,7 @@ mtb_10pics = %w[
     gears: ['18', '21', '28'].sample,
     hand_brakes: true,
     user: User.all.sample,
-    price: rand(70..300)
+    price: rand(5..25)
   )
   file = URI.open("https://res.cloudinary.com/lluz/image/upload/#{mtb_10pics[increment]}")
   bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -188,7 +188,7 @@ fixie_10pics = %w[
     gears: 'No gears',
     hand_brakes: [true, false].sample,
     user: User.all.sample,
-    price: rand(70..300)
+    price: rand(5..25)
   )
   file = URI.open("https://res.cloudinary.com/lluz/image/upload/#{fixie_10pics[increment]}")
   bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -220,7 +220,7 @@ city_10pics = %w[
     gears: ['3', '7', '18', '21'].sample,
     hand_brakes: [true, false].sample,
     user: User.all.sample,
-    price: rand(70..300)
+    price: rand(5..25)
   )
   file = URI.open("https://res.cloudinary.com/lluz/image/upload/#{city_10pics[increment]}")
   bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -247,7 +247,7 @@ bmx_5pics = %w[
     gears: 'No gears',
     hand_brakes: [true, false].sample,
     user: User.all.sample,
-    price: rand(70..300)
+    price: rand(5..25)
   )
   file = URI.open("https://res.cloudinary.com/lluz/image/upload/#{bmx_5pics[increment]}")
   bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -274,7 +274,7 @@ cargo_5pics = %w[
     gears: ['No gears', '7', '21'].sample,
     hand_brakes: true,
     user: User.all.sample,
-    price: rand(70..300)
+    price: rand(5..25)
   )
   file = URI.open("https://res.cloudinary.com/lluz/image/upload/#{cargo_5pics[increment]}")
   bike.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
