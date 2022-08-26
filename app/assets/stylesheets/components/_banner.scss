@@ -34,7 +34,7 @@
   color: $ff_primary;
   font-family: "Cinzel", serif !important;
   margin: 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  text-shadow: 4px 3px 4px rgba(0,0,0,0.5);
   font-size: 104px;
   font-weight: bold;
   margin-bottom: 0px;
@@ -49,6 +49,9 @@
 .second-space {
   margin-top: 150px;
   opacity: 0;
+  text-shadow: 4px 3px 4px rgba(0,0,0,0.5);
+  font-family: "Aboreto", "cursive";
+  font-weight: 600;
 }
 
 .hero-text p {

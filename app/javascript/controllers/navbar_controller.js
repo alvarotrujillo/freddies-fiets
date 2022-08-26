@@ -4,7 +4,12 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   static targets = [ "banner", "navbar"]
-
+  connect() {
+    if (!this.hasBannerTarget) {
+      this.navbarTarget.classList.remove("navbar-transparent")
+      this.navbarTarget.classList.add("navbar-babyblue")
+    }
+  }
   updateNavbar() {
     if (!this.hasBannerTarget) {
       // this.navbarTarget.classList.remove("navbar-transparent")

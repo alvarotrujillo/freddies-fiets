@@ -1,24 +1,53 @@
 <div class="main-content pt-4 container">
-    <div class="bb-card-details">
-      <h1><em><%= @bike.name %></em></h1>
-      <%= cl_image_tag(@bike.photo.key) %>
-        <div class="bb-card-text">
-          <p><strong>Owner:</strong> <%= @bike.user.first_name %> <%= @bike.user.last_name %> </p>
-          <p><strong>City:</strong> <%= @bike.location %></p>
-          <p><strong>Type of bike:</strong> <%= @bike.bike_type %></p>
-          <p><strong>Gears:</strong> <%= @bike.gears %></p>
-          <p><strong>Description from the owner:</strong> <%= @bike.description %></p>
-          <p><%= @bike.price %>€</p>
-          <%# <button type="button" class="btn btn-dark"><%= link_to "Back", :back %>
-          <% if current_user == @bike.user %>
-             <button type="button" class="btn btn-ghost"><%= link_to "Edit your bike", edit_bike_path(@bike.id) %></button>
-          <% elsif user_signed_in? %>
-            <button type="button" class="btn btn-ghost"><%= link_to "Rent now!", new_bike_booking_path(@bike.id) %></button>
-          <% else %>
-            <button type="button" class="btn btn-ghost"><%= link_to "Log in to rent this bike", new_user_session_path %></button>
-          <% end %>
-        </div>
-        <%# Add logic so possibility of end-date being added %>
+
+  <h1><%= @bike.name %></h1>
+  <div class="d-flex">
+    <i class="fa fa-map-pin" aria-hidden="true"></i>
+    <p><%= @bike.location %></p>
+  </div>
+
+  <div class="card"> <%# change this so it is smaller reasonable size %>
+    <%= cl_image_tag(@bike.photo.key) %>
+  </div>
+
+  <div class="bb-card-text d-flex justify-content-between">
+    <div class="card">
+      <div class="card">
+        <p><%= @bike.bike_type %> . from <%= @bike.user.first_name.capitalize %> </p>
+      </div>
+
+      <div class="card">
+      <p><%= @bike.description %></p>
+      </div>
+
+      <div class="card">
+        <h3>You will have:</h3>
+        <p><%= @bike.hand_brakes %></p>
+        <p><%= @bike.gears %></p>
+      </div>
+
+      <div class="card">
+        <h3>Your host:</h3>
+        <p><%= @bike.user.first_name %> <%= @bike.user.last_name %></p>
+        <p>XX verified</p>
       </div>
     </div>
+
+    <div class="card">
+      <p> <strong><%= @bike.price %>€ / day </strong></p>
+      <%# <button type="button" class="btn btn-dark"><%= link_to "Back", :back %>
+      <% if current_user == @bike.user %>
+          <button type="button" class="btn btn-ghost"><%= link_to "Edit your bike", edit_bike_path(@bike.id) %></button>
+      <% elsif user_signed_in? %>
+        <button type="button" class="btn btn-ghost"><%= link_to "Rent now!", new_bike_booking_path(@bike.id) %></button>
+      <% else %>
+        <button type="button" class="btn btn-ghost"><%= link_to "Log in to rent this bike", new_user_session_path %></button>
+      <% end %>
+    </div>
+  </div>
+
 </div>
+
+  <%# Add logic so possibility of end-date being added %>
+  <%# <div class="bb-card-details"> %>
+  <%# </div> %>
