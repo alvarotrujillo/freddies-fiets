@@ -53,6 +53,13 @@ end
     redirect_to bike_path(@bike)
   end
 
+  def change
+    @bike = Bike.find(params[:id])
+    @bike.active = !@bike.active
+    @bike.save
+    redirect_to account_path
+  end
+
   private
 
   def bike_params

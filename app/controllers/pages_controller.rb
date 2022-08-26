@@ -8,7 +8,7 @@ class PagesController < ApplicationController
       redirect_to root_path, notice: "Please, sign in"
     end
 
-    @user_bikes = Bike.where(user: current_user)
+    @user_bikes = Bike.where(user: current_user).order(:created_at)
     @user_bookings = Booking.where(user: current_user)
   end
 

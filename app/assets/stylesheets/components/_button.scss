@@ -1,7 +1,11 @@
-.btn-ghost {
-  color: $gray !important;
-  // border: 1px solid #4A4A4A;
+.btn {
+  color: white;
   background: $ff_secondary;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.btn-ghost {
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -9,25 +13,27 @@
   transition: opacity 0.3s ease;
 }
 
+.btn-ghost a {
+  color: white;
+}
+
 .btn-ghost:hover {
   opacity: 1;
-  background: $ff_secondary !important;
+  background: $ff_secondary_dark;
+  color: white;
+  border-color: white;
 }
 
 .btn-flat {
-  color: white;
-  // box-shadow: 1px 1px 3px rgb(0 0 0 / 80%);
-  // text-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
   padding: 8px 24px;
   border-radius: 4px;
-  background: $ff_primary;
   transition: background 0.3s ease;
   font-size: 24px;
 }
 
 .btn-flat:hover {
-  background: $ff_primary_dark;
-  color: #FEFEFB;
+  background: $ff_secondary_dark;
+  color: white;
 }
 
 .btn-gradient {

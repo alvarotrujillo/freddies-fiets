@@ -9,7 +9,7 @@
           <p><strong>Gears:</strong> <%= @bike.gears %></p>
           <p><strong>Description from the owner:</strong> <%= @bike.description %></p>
           <p><%= @bike.price %>€</p>
-          <button type="button" class="btn btn-dark"><%= link_to "Back", :back %></button>
+          <%# <button type="button" class="btn btn-dark"><%= link_to "Back", :back %>
           <% if current_user == @bike.user %>
              <button type="button" class="btn btn-ghost"><%= link_to "Edit your bike", edit_bike_path(@bike.id) %></button>
           <% elsif user_signed_in? %>

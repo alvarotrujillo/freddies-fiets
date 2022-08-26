@@ -16,10 +16,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
+  patch "bikes/:id/changes", to: "bikes#change", as: "change"
+  
   resources :bikes, only: %i[index new create show update edit filter] do
     resources :bookings, only: %i[new create]
   end
 
   # resources :pages
+
+
 end
