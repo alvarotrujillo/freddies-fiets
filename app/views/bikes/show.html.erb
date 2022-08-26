@@ -42,11 +42,11 @@
           </div>
 
           <% if current_user == @bike.user %>
-            <button type="button" class="btn btn-ghost"><%= link_to "Edit your bike", edit_bike_path(@bike.id) %></button>
+            <button type="button" class="btn nodecor btn-ghost"><%= link_to "Edit your bike", edit_bike_path(@bike.id) %></button>
           <% elsif user_signed_in? %>
-            <button type="button" class="btn btn-ghost"><%= link_to "Rent now!", new_bike_booking_path(@bike.id) %></button>
+            <button type="button" class="btn nodecor btn-flat  "><%= link_to "Rent now!", new_bike_booking_path(@bike.id) %></button>
           <% else %>
-            <button type="button" class="btn btn-ghost"><%= link_to "Log in to rent this bike", new_user_session_path %></button>
+            <button type="button" class="btn nodecor btn-flat  "><%= link_to "Log in to rent this bike", new_user_session_path %></button>
           <% end %>
         </div>
       </div>

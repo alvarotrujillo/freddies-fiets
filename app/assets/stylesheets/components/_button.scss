@@ -27,12 +27,14 @@
   border-radius: 4px;
   transition: background 0.3s ease;
   font-size: 24px;
-  background: $ff_secondary;
+  background: $yellow;
 }
 
 .btn-flat:hover {
-  background: $ff_secondary_dark;
-  color: white;
+  background: $yellow;
+  // color: white;
+  border: 1 $black solid !important;
+  text-decoration: none !important;
 }
 
 .btn-gradient {
@@ -49,3 +51,4 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+

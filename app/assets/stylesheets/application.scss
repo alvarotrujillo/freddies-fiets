@@ -29,7 +29,10 @@ h2{
 }
 
 a {
-  text-decoration: none;
   color: initial;
+  text-decoration: none !important;
+}
+a:hover{
+  text-decoration: none !important;
 
 }

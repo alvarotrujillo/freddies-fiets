@@ -7,20 +7,19 @@ export default class extends Controller {
   connect() {
     if (!this.hasBannerTarget) {
       this.navbarTarget.classList.remove("navbar-transparent")
-      this.navbarTarget.classList.add("navbar-babyblue")
+      this.navbarTarget.classList.add("navbar-yellow")
     }
   }
   updateNavbar() {
     if (!this.hasBannerTarget) {
-      // this.navbarTarget.classList.remove("navbar-transparent")
-      // this.navbarTarget.classList.add("navbar-babyblue")
+      return
     }
 
     if (window.scrollY > 16) {
       this.navbarTarget.classList.remove("navbar-transparent")
-      this.navbarTarget.classList.add("navbar-babyblue")
+      this.navbarTarget.classList.add("navbar-yellow")
     } else {
-      this.navbarTarget.classList.remove("navbar-babyblue")
+      this.navbarTarget.classList.remove("navbar-yellow")
       this.navbarTarget.classList.add("navbar-transparent")
     }
   }
