@@ -3,14 +3,13 @@
 uncomment the lines of the ERB code which are commented out below. %>
 
 <div
-  class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-babyblue"
+  class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-transparent"
   data-navbar-target="navbar"
   data-action="scroll@window->navbar#updateNavbar"
 >
   <div class="container-fluid">
     <%= link_to root_path,  class: "navbar-brand" do %>
       <%= image_tag "freddiefiets.png" %>
-      <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
