@@ -1,2 +1,6 @@
-  <h2><%= bike.name %></h2>
-  <p><%= bike.location %></p>
+<h2><em><%= bike.name %></em></h2>
+<ul>
+  <li>Located at: <%= bike.location %></li>
+  <li>Price: €<%= bike.price %> per day</li>
+  <li>Contact <%= bike.user.first_name %> <%= bike.user.last_name %> if interested</li>
+</ul>
