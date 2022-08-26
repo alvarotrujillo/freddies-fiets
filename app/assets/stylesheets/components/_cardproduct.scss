@@ -5,6 +5,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.grayscale {
+  filter: grayscale(1);
 }
 
 .card-product img {
@@ -27,13 +32,25 @@
   margin-top: 8px;
 }
 
+.card-product .icon-booked {
+  position: absolute;
+  bottom:  20px;
+  right: 17px;
+  color: $ff_secondary;
+}
+
 .card-product .card-product-infos {
   padding: 16px;
   color: black !important;
   // next line is to put the text of edit bike on the right
   flex: 1;
-
 }
+
+.card-product .card-product-infos h6 {
+  color: $ff_secondary !important;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color:initial;
