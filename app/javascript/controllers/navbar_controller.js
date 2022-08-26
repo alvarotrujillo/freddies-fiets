@@ -11,7 +11,9 @@ export default class extends Controller {
     }
   }
   updateNavbar() {
-
+    if (!this.hasBannerTarget) {
+      return
+    }
     if (window.scrollY > 50) {
       this.navbarTarget.classList.remove("navbar-transparent")
       this.navbarTarget.classList.add("navbar-babyblue")
