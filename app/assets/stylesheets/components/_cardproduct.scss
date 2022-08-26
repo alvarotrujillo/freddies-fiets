@@ -19,24 +19,30 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
+.card-product .card-product-infos h6 {
+  color: $gray !important;
+  font-weight: bold;
+}
+
 .card-product .icon-booked {
   position: absolute;
   bottom:  20px;
-  right: 17px;
-  color: $ff_secondary;
+  right: 2rem;
+  color: $black;
 }
 
 .card-product .card-product-infos {
@@ -46,10 +52,6 @@
   flex: 1;
 }
 
-.card-product .card-product-infos h6 {
-  color: $ff_secondary !important;
-  font-weight: bold;
-}
 
 a {
   text-decoration: none;

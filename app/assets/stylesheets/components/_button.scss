@@ -1,27 +1,25 @@
 .btn {
-  color: white;
-  background: $ff_secondary;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  // color: white;
+  // background: $ff_secondary;
+  // box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .btn-ghost {
   padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  border-radius: 20px;
+  color: $black;
+  // font-weight: lighter;
+  // transition: opacity 0.3s ease;
 }
 
-.btn-ghost a {
-  color: white;
-}
 
 .btn-ghost:hover {
-  opacity: 1;
-  background: $ff_secondary_dark;
-  color: white;
-  border-color: white;
+  // opacity: 1;
+  border: 1 solid $gray;
+  color: $gray;
+  // color: white;
+
 }
 
 .btn-flat {
