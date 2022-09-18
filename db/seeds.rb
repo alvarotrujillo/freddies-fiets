@@ -18,7 +18,7 @@ User.destroy_all
 puts "Database is clean."
 
 # Test User Credentials below!
-Freddie = User.create!(email: "freddie@test.com", first_name: "Freddie", last_name: "Mercury", password: 'batch929', address: "Rotterdam")
+Freddie = User.create!(email: "freddie@test.com", first_name: "Freddie", last_name: "Mercury", password: 'batch929', address: "Schouwburgplein 85, 3012 CL Rotterdam")
 
 puts User.first.id
 
@@ -47,7 +47,7 @@ increment = 0 # var used to select different pics
 bike = Bike.new(
   name: "Folding Bike",
   bike_type: "City bike",
-  location: "Diemen",
+  location: "Martinus Nijhofflaan 7, 2624 ER Delft",
   description: "The perfect solution for a hybrid commute as you can fold it and carry in the public transport",
   gears: "7",
   hand_brakes: true,
@@ -61,7 +61,7 @@ bike.save!
 bike = Bike.new(
   name: "Crazy Orange",
   bike_type: "Fixie bike",
-  location: "Diemen",
+  location: "Mathenesserplein 76, 3022 LD Rotterdam",
   description: "The ultimate hipster bike at your service",
   gears: "No gears",
   hand_brakes: true,
@@ -75,7 +75,7 @@ bike.save!
 bike = Bike.new(
   name: "Sparta Mojo",
   bike_type: "City bike",
-  location: "Diemen",
+  location: "Molengraaffsingel 33, 2629 JD Delft",
   description: "The all around dutch bike with, full of storage and optional Baby Carrier",
   gears: "7",
   hand_brakes: true,
@@ -89,7 +89,7 @@ bike.save!
 bike = Bike.new(
   name: "Rat bike (Brooks saddle)",
   bike_type: "City bike",
-  location: "Diemen",
+  location: "Statenweg 103, 3039 HJ Rotterdam",
   description: "Fast define this low maintenance bike",
   gears: "7",
   hand_brakes: false,
