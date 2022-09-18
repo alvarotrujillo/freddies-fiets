@@ -15,7 +15,7 @@ export default class extends Controller {
       return
     }
 
-    if (window.scrollY > 16) {
+    if (window.scrollY > 50) {
       this.navbarTarget.classList.remove("navbar-transparent")
       this.navbarTarget.classList.add("navbar-yellow")
     } else {
